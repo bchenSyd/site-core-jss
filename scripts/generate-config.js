@@ -51,7 +51,7 @@ function writeConfig(config) {
 const config = {};\n`;
 
   // Set base configuration values, allowing override with environment variables
-  Object.keys(config).forEach(prop => {
+  Object.keys(config).forEach((prop) => {
     configText += `config.${prop} = process.env.REACT_APP_${constantCase(prop)} || "${
       config[prop]
     }",\n`;

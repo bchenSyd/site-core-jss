@@ -18,12 +18,12 @@ const pluginDefinitions = [
     rootPath: 'scripts/config/plugins',
     moduleType: ModuleType.CJS,
   },
-].map(definition => ({ ...definition, relative: true }));
+].map((definition) => ({ ...definition, relative: true }));
 
 run(pluginDefinitions);
 
 function run(definitions) {
-  definitions.forEach(definition => {
+  definitions.forEach((definition) => {
     generatePlugins(definition);
   });
 }

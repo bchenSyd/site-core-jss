@@ -9,7 +9,8 @@ class ComputedPlugin {
 
   exec(config) {
     return Object.assign({}, config, {
-      graphQLEndpoint: config.graphQLEndpoint || `${config.sitecoreApiHost}${config.graphQLEndpointPath}`,
+      graphQLEndpoint:
+        config.graphQLEndpoint || `${config.sitecoreApiHost}${config.graphQLEndpointPath}`,
     });
   }
 }

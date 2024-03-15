@@ -12,7 +12,7 @@ export default function (manifest) {
     templateName: 'Styleguide-FieldUsage-Checkbox',
     icon: SitecoreIcon.CheckboxSelected,
     fields: [
-      { name: 'checkbox', type: CommonFieldTypes.Checkbox },
+      { name: 'checkbox3', type: CommonFieldTypes.Checkbox },
       { name: 'checkbox2', type: CommonFieldTypes.Checkbox },
     ],
     // inherit fields from another template (../templates/Styleguide-Explanatory-Component)

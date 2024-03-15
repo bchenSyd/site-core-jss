@@ -91,6 +91,7 @@
   },
   "scripts": {
     "jss": "jss",
+    "dev":"cross-env-shell JSS_MODE=disconnected PORT=3001 \"npm-run-all --serial bootstrap --parallel start:react start:proxy\" ",
     "start": "cross-env-shell JSS_MODE=disconnected \"npm-run-all --serial bootstrap --parallel start:react start:proxy start:watch-components\"",
     "start:connected": "npm-run-all --serial bootstrap start:react start:watch-components",
     "start:rendering-host": "cross-env-shell NODE_ENV=development JSS_RENDER_ENGINE=http \"node scripts/http-renderer.js\"",
@@ -98,7 +99,7 @@
     "build:rendering-host": "npm-run-all --serial bootstrap build:client:rendering-host build:server afterbuild:rendering-host",
     "afterbuild:rendering-host": "del-cli build-rendering-host && move-cli build build-rendering-host",
     "scaffold": "node scripts/scaffold-component.js",
-    "start:react": "react-scripts start",
+    "start:react": "JSS_MODE=disconnected react-scripts start",
     "start:proxy": "node scripts/disconnected-mode-proxy.js",
     "start:watch-components": "node scripts/generate-component-builder/index.js --watch",
     "build:client": "cross-env-shell PUBLIC_URL=$npm_package_config_sitecoreDistPath \"react-scripts build\"",

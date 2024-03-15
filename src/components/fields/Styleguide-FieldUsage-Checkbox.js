@@ -16,7 +16,9 @@ const StyleguideFieldUsageCheckbox = (props) => (
        */}
       {props.fields && props.fields.checkbox && props.fields.checkbox.value && (
         <li>
-          <code>checkbox</code> is true
+          <input type="checkbox" checked>
+            checked
+          </input>
         </li>
       )}
       {!props.fields ||
